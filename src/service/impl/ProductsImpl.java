@@ -24,7 +24,13 @@ public class ProductsImpl implements Products {
 
     @Override
     public boolean deleteProduct(Product product) {
-        return false;
+        // true - если id был
+        // false - если id не было
+
+        if (products.contains(product)){
+            products.remove(product);
+            return true;
+        } else return false;
     }
 
     @Override
