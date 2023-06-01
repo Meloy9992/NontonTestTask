@@ -27,8 +27,8 @@ public class ProductsImpl implements Products {
         // true - если id был
         // false - если id не было
 
-        if (products.contains(product)){
-            products.remove(product);
+        if (products.contains(product)){ // Если продукт содержится в списке
+            products.remove(product); // Удалить продукт
             return true;
         } else return false;
     }
