@@ -14,10 +14,10 @@ public class ProductsImpl implements Products {
         // true - id нет
         // false - id сущестует
 
-        if (products.contains(product)){
+        if (products.contains(product)){ // Если продукт содержится
             return false;
         }else {
-            products.add(product);
+            products.add(product); // Добавить продукт в отдельный элемент
             return true;
         }
     }

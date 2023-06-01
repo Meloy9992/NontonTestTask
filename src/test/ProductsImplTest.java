@@ -19,7 +19,7 @@ class ProductsImplTest {
         products.addProduct(product); // Добавляем данные во временный массив
         products.addProduct(product1); // Добавляем данные во временный массив
 
-        // Сравнение последнего элемента из списка и элемента который мы добавили
+        // Сравнение последнего элемента из списка и элементом который мы добавили
         Assert.assertEquals(products.getProducts().get(products.getProducts().size() - 1), product1);
 
         //Проверка что элемент существует
@@ -27,7 +27,6 @@ class ProductsImplTest {
 
         //Проверка что элемент не существует
         Assert.assertTrue(products.addProduct(product2));
-
     }
 
     @Test
