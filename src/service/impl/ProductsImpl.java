@@ -35,7 +35,15 @@ public class ProductsImpl implements Products {
 
     @Override
     public String getName(String id) {
-        return null;
+        // Вернуть name елси id и id из списка совпали
+        // Если продукта нет, то вернуть пустую строку
+
+        for (Product prod: products) {
+            if (id.equals(prod.getId())){
+                return prod.getName();
+            }
+        }
+        return "";
     }
 
     @Override
