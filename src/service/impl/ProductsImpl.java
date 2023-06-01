@@ -17,9 +17,10 @@ public class ProductsImpl implements Products {
         if (products.contains(product)){ // Если продукт содержится
             return false;
         }else {
-            products.add(product); // Добавить продукт в отдельный элемент
+            products.add(product); // Добавить продукт
             return true;
         }
+
     }
 
     @Override
@@ -35,7 +36,7 @@ public class ProductsImpl implements Products {
 
     @Override
     public String getName(String id) {
-        // Вернуть name елси id и id из списка совпали
+        // Вернуть name если id и id из списка совпали
         // Если продукта нет, то вернуть пустую строку
 
         for (Product prod: products) {
@@ -48,7 +49,17 @@ public class ProductsImpl implements Products {
 
     @Override
     public List<String> findByName(String name) {
-        return null;
+        // Вернуть список id если name и name из списка совпали
+        // Если ничего не найдено, то вернуть пустой список
+
+        List<String> idProducts = new ArrayList<>();
+
+        for (Product pr: products) {
+            if (name.equals(pr.getName())){
+                idProducts.add(pr.getId());
+            }
+        }
+        return idProducts;
     }
 
     public List<Product> getProducts() {
